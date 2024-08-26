@@ -1,0 +1,64 @@
+<div class="d-flex justify-content-center align-items-center vh-100">
+  <div class="card p-4 shadow" style="width: 100%; max-width: 400px;">
+    <div class="card-body">
+      <h2 class="text-center mb-4 royalPurpleColor">Register</h2>
+      <form #registerForm="ngForm" (ngSubmit)="register()">
+        <div class="mb-3">
+          <label for="username" class="form-label royalPurpleColor">Username</label>
+          <input
+            type="text"
+            id="username"
+            class="form-control"
+            [(ngModel)]="user.username"
+            name="username"
+            required
+            #username="ngModel">
+          <div class="text-danger" *ngIf="username.invalid && (username.dirty || username.touched)">
+            <p *ngIf="username.errors?.['required']">Username is required.</p>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label royalPurpleColor">Email</label>
+          <input
+            type="email"
+            id="email"
+            class="form-control"
+            [(ngModel)]="user.email"
+            name="email"
+            required
+            appEmailFormat
+            #email="ngModel">
+          <div class="text-danger" *ngIf="email.invalid && (email.dirty || email.touched)">
+            <p *ngIf="email.errors?.['required']">Email is required.</p>
+            <p *ngIf="email.errors?.['emailFormat']">Please enter a valid email address.</p>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label royalPurpleColor">Password</label>
+          <input
+            type="password"
+            id="password"
+            class="form-control"
+            [(ngModel)]="user.password"
+            name="password"
+            required
+            #password="ngModel">
+          <div class="text-danger" *ngIf="password.invalid && (password.dirty || password.touched)">
+            <p *ngIf="password.errors?.['required']">Password is required.</p>
+          </div>
+        </div>
+        <button
+          appBackground
+          type="submit"
+          class="btn btn-primary w-100"
+          [disabled]="registerForm.invalid">Register
+        </button>
+      </form>
+      <p class="text-center royalPurpleColor mt-3">
+        Already have an account?
+        <a class="royalPurpleColor" routerLink="/login">Login</a>
+      </p>
+      <p class="text-danger text-center mt-2" *ngIf="error">{{ error }}</p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="table-responsive">
+    <table class="table table-bordered table-borderless">
+      <thead class="thead-light">
+      <tr>
+        <th scope="col" class="text-nowrap">Sosyal Medya Linki</th>
+        <th scope="col" class="text-nowrap">Sosyal Medya Adı</th>
+        <th scope="col" class="text-nowrap">Açıklama</th>
+        <th scope="col" class="text-nowrap"></th>
+      </tr>
+      </thead>
+      <tbody >
+      <tr  *ngFor="let link of links; let i = index">
+        <td [ngStyle]="{ 'background-color': i % 2 === 0 ? 'secondaryBackgroundColor' : 'transparent' }">
+          <a class="royalPurpleColor text-decoration-none"
+             (click)="visitLink(link)" href="{{ link.url }}"
+             target="_blank">{{ link.url }}
+          </a>
+        </td>
+        <td [ngStyle]="{ 'background-color': i % 2 === 0 ? 'secondaryBackgroundColor' : 'transparent' }">
+          {{ link.name | uppercase }}
+        </td>
+        <td [ngStyle]="{ 'background-color': i % 2 === 0 ? 'secondaryBackgroundColor' : 'transparent' }">
+          {{ link.desc }}
+        </td>
+        <td [ngStyle]="{ 'background-color': i % 2 === 0 ? 'secondaryBackgroundColor' : 'transparent' }">
+          <button (click)="editLink(link)" class="btn btn-secondary royalPurpleBackgroundColor">
+            <i class="bi bi-pencil"></i>
+          </button>
+          <button  (click)="deleteLink(link?._id)" class="btn btn-danger ms-2">
+            <i class="bi bi-trash"></i>
+          </button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

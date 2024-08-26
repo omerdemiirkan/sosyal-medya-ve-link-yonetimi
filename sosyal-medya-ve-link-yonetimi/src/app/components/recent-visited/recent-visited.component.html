@@ -1,0 +1,10 @@
+<div class="container-fluid d-flex justify-content-center align-items-center  py-4 px-5 my-4">
+  <div *ngIf="visitedLinks.length" class="bg-light borderRoyalPurpleColor rounded">
+    <h5 appBackground class="mb-3 py-3 text-white text-center">Son Ziyaret Edilenler</h5>
+    <ul class="list-group">
+      <li *ngFor="let link of visitedLinks; let i = index" class="list-group-item d-flex justify-content-between align-items-center">
+        <a class="royalPurpleColor text-decoration-none" href="{{ link.url }}" target="_blank">{{i+1}}) {{ link.url }}</a>
+      </li>
+    </ul>
+  </div>
+</div>

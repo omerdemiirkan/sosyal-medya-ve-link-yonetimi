@@ -1,0 +1,22 @@
+<app-navbar></app-navbar>
+<div class="container secondaryBackgroundColor ">
+  <div class="d-flex flex-column flex-md-row justify-content-between">
+    <app-search-input class="search-input" (searchTermChange)="onSearchTermChange($event)"></app-search-input>
+    <app-button class="add-button" (click)="openModal()" className="mt-4 mb-2">
+      <i class="bi bi-plus-lg"></i> Yeni Hesap Ekle
+    </app-button>
+  </div>
+  <main>
+    <app-modal (linkAdded)="onLinkAdded($event)"></app-modal>
+    <app-link-form [links]="pagedLinks" (editRequest)="openUpdateForm($event)"></app-link-form>
+    <app-update-form [link]="selectedLink" (linkUpdated)="onLinkUpdated()" *ngIf="selectedLink"></app-update-form>
+    <app-pagination
+      [totalItems]="filteredLinks.length"
+      [itemsPerPage]="itemsPerPage"
+      [currentPage]="currentPage"
+      (pageChange)="onPageChange($event)"
+      (itemsPerPageChange)="onItemsPerPageChange($event)">
+    </app-pagination>
+  </main>
+</div>
+<app-recent-visited class="d-flex justify-content-center align-items-center"></app-recent-visited>

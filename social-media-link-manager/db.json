@@ -1,0 +1,60 @@
+{
+  "socialMediaLinks": [
+    {
+      "id": "1",
+      "name": "Facebook",
+      "url": "https://www.facebook.com",
+      "desc": "A social networking platform for connecting with friends and family."
+    },
+    {
+      "id": "2",
+      "name": "Twitter",
+      "url": "https://www.twitter.com",
+      "desc": "A microblogging service for sharing short messages and updates."
+    },
+    {
+      "id": "3",
+      "name": "Instagram",
+      "url": "https://www.instagram.com",
+      "desc": "A photo and video sharing app for social networking."
+    },
+    {
+      "id": "5",
+      "name": "YouTube",
+      "url": "https://www.youtube.com",
+      "desc": "A video sharing platform for watching and uploading videos."
+    }
+  ],
+  "users": [
+    {
+      "id": "603d",
+      "username": "omer.demirkan",
+      "email": "omerdemirkan12@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "3f4a",
+      "username": "omer",
+      "email": "omer",
+      "password": "123"
+    },
+    {
+      "id": "2b90",
+      "username": "asda",
+      "email": "adadad",
+      "password": "adasda"
+    },
+    {
+      "id": "2e21",
+      "username": "omer.demirkan",
+      "email": "324242",
+      "password": "234242"
+    },
+    {
+      "id": "0007",
+      "username": "orkun",
+      "email": "orkun@hot.com",
+      "password": "123"
+    }
+  ]
+}

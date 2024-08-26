@@ -1,0 +1,22 @@
+.d-flex {
+  display: flex;
+}
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-md-row {
+  flex-direction: row;
+}
+@media (max-width: 767.98px) {
+  .d-flex.flex-md-row {
+    flex-direction: column;
+  }
+  .search-input {
+    order: 2;
+  }
+  .add-button {
+    order: 1;
+    margin-left: auto;
+  }
+}

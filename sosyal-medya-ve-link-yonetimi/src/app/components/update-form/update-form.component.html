@@ -1,0 +1,30 @@
+<div class="modal fade" id="updateModal" tabindex="-1" aria-labelledby="updateModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title royalPurpleColor" id="updateModalLabel">Güncelle</h5>
+        <button type="button" class="btn-close" (click)="onCancel()" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" *ngIf="link">
+        <form (ngSubmit)="updateLink()">
+          <div class="mb-3">
+            <label for="name" class="form-label royalPurpleColor">Sosyal Medya Adı</label>
+            <input type="text" id="name" class="form-control" [(ngModel)]="link.name" name="name" required />
+          </div>
+          <div class="mb-3">
+            <label for="url" class="form-label royalPurpleColor">Sosyal Medya Linki</label>
+            <input type="text" id="url" class="form-control" [(ngModel)]="link.url" name="url" required />
+          </div>
+          <div class="mb-3">
+            <label for="desc" class="form-label royalPurpleColor">Açıklama</label>
+            <input type="text" id="desc" class="form-control" [(ngModel)]="link.desc" name="desc" required />
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn secondaryBackgroundColor royalPurpleColor" (click)="onCancel()">İptal</button>
+            <button appBackground type="submit" class="btn btn-primary">Güncelle</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

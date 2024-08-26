@@ -1,0 +1,20 @@
+.table-responsive {
+  max-height: 650px;
+  overflow-y:auto;
+  overflow-x: auto;
+}
+.table {
+  min-width: 100%;
+}
+.table th, .table td {
+  white-space: nowrap;
+  padding: 0.5rem;
+}
+@media (max-width: 767.98px) {
+  .table {
+    font-size: 12px;
+  }
+
+}
+
+

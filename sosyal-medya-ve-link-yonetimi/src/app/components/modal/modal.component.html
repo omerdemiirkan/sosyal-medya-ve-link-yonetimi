@@ -1,0 +1,29 @@
+<div class="modal fade" id="socialMediaModal" tabindex="-1" aria-labelledby="socialMediaModaLabel" aria-hidden="true" *ngIf="isVisible">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="d-flex justify-content-end mt-2">
+        <button type="button" class="btn-close "  (click)="close()" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form (ngSubmit)="onSubmit()" #linkForm="ngForm">
+          <div class="mb-3">
+            <label for="socialMediaLink" class="form-label royalPurpleColor">Sosyal Medya Linki</label>
+            <input type="text" class="form-control rounded-3" id="socialMediaLink" [(ngModel)]="link.url" name="socialMediaLink">
+          </div>
+          <div class="mb-3">
+            <label for="socialMediaName" class="form-label royalPurpleColor">Sosyal Medya Adı</label>
+            <input type="text" class="form-control rounded-3" id="socialMediaName" [(ngModel)]="link.name" name="socialMediaName">
+          </div>
+          <div class="mb-3">
+            <label for="description" class="form-label royalPurpleColor">Açıklama</label>
+            <textarea class="form-control rounded-3" id="description"  [(ngModel)]="link.desc" name="description"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer ">
+        <button type="button" class="btn secondaryBackgroundColor royalPurpleColor " (click)="close()">Vazgeç</button>
+        <button appBackground type="button" class="btn btn-primary" (click)="onSubmit()">Kaydet</button>
+      </div>
+    </div>
+  </div>
+</div>

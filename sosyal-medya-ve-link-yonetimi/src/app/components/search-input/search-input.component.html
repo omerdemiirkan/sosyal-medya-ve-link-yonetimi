@@ -1,0 +1,16 @@
+<div class="input-group">
+  <input
+    type="text"
+    class="form-control shadow-none  px-5  my-4 rounded-start-5"
+    placeholder="Search objects..."
+    [(ngModel)]="searchTerm"
+    (ngModelChange)="onSearchTermChange()"
+  />
+  <span appBackground class="input-group-text px-3  my-4 rounded-end-5 text-white">
+   <img src="assets/img/search.png" alt="Logo" class="d-block " width="15.6" height="16">
+  </span>
+  <span style="margin-left: 6px" class="bg-white rounded-5  px-2  my-4">
+  <img class="mt-2" src="assets/img/img.png" alt="Logo" width="16" height="16.5" >
+  </span>
+
+</div>

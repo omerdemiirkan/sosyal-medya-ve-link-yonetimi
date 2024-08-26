@@ -1,0 +1,49 @@
+<div class="d-flex justify-content-between align-items-center py-2">
+  <div style="margin-left: 20px" class="d-flex align-items-center ">
+    <span class="me-2 royalPurpleColor">Show:</span>
+    <div class="px-2 py-1 bg-light borderRoyalPurpleColor rounded-4 d-flex align-items-center">
+      <span class="me-2">{{ itemsPerPage }} rows</span>
+      <div class="d-flex flex-column align-items-center ">
+        <button class="btn p-0  m-0 ml-1"  (click)="increaseItemsPerPage()">
+          <img src="assets/img/up.png" alt="Logo" class="d-block" width="9.97" height="7">
+        </button>
+        <button class="btn p-0 m-0" (click)="decreaseItemsPerPage()" [disabled]="itemsPerPage <= 1">
+          <img src="assets/img/down.png" alt="Logo" class="d-block" width="9.97" height="7">
+        </button>
+      </div>
+    </div>
+  </div>
+  <nav aria-label="Page navigation px-1">
+    <ul class="pagination pagination-sm mb-0">
+      <li class="page-item" [class.disabled]="currentPage === 1">
+        <a class="page-link royalPurpleColor border-0 px-1" href="javascript:void(0)"
+           (click)="changePage(currentPage - 1)" aria-label="Previous"
+           style="background-color: transparent;">
+          <span aria-hidden="true">&laquo;</span>
+        </a>
+      </li>
+      <li class="page-item active">
+        <a class="page-link text-dark border-0 px-1" href="javascript:void(0)"
+           style="background-color: transparent;">
+          {{ currentPage }}
+        </a>
+      </li>
+      <li class="page-item">
+        <span class="page-link text-dark border-0 px-1" style="background-color: transparent;">of</span>
+      </li>
+      <li class="page-item">
+        <a class="page-link text-dark border-0 px-1" href="javascript:void(0)"
+           style="background-color: transparent;">
+          {{ totalPages }}
+        </a>
+      </li>
+      <li class="page-item" [class.disabled]="currentPage === totalPages">
+        <a class="page-link royalPurpleColor border-0 px-1" href="javascript:void(0)"
+           (click)="changePage(currentPage + 1)" aria-label="Next"
+           style="background-color: transparent;">
+          <span aria-hidden="true">&raquo;</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
