@@ -36,4 +36,4 @@ Proje Kullanımı
 6. Çıkış (logout) butonuna tıkladığınızda çıkış işlemi başarıyla gerçekleşecektir.
 
 
-[sosyal-medya-link-yonetimi-projesi.md] dosyasını okuyup detaylara bakabilirsin.
+detaylar dosyasının içerisinden [sosyal-medya-link-yonetimi-projesi.md] dosyasını okuyup detaylara bakabilirsin.
